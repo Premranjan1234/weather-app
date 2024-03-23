@@ -5,11 +5,11 @@ This is a simple weather app built using React and Tailwind CSS. It allows users
 
 ## Project Link
 
-[Click here to visit the project](https://65fe779e430d3ebad5cca31d--tranquil-sprinkles-97a42d.netlify.app/)
+[Click here to visit the project](https://65fe7ea3ab32b2c3ed8e162c--rad-halva-789d62.netlify.app/)
 
 ## Features
 
-- **Search by City and Country**: Enter the name of the city and country to get the current weather information.Like for india country enter 'in' for united kingdom enter 'uk' and in city enter 'Mumbai' or 'Delhi' or 'Kolkata' or 'London' like this.On clicking submit button you will get all details related to weather.
+- **Search by City and Country**: Enter the name of the city and country to get the current weather information.Like for india country enter 'in' for united kingdom enter 'uk' and in city enter 'Mumbai','Delhi','Kolkata','Bangalore' or 'London'  like this.On clicking submit button you will get all details related to weather.
 
 - **Responsive Design**: The app is responsive and adapts to different screen sizes.
 
