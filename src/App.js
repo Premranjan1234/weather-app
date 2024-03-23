@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import Header from './Header';
@@ -35,15 +35,18 @@ const App = () => {
       <div className=' pl-3 sm:flex-col'>
         
       <h2 className=" sm:flex-col md:flex text-2xl font-semibold  mt-5 text-white ">Weather Information</h2>
-    
+    <div className="flex flex-col sm:flex-row">
+      <div className="flex items-center mb-2 sm:mb-0">
       <label className=' text-3xl md:text-xl text-white'>City: </label>
       <input className=" m-2 mr-4 py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
           placeholder="Enter city name" type="text" value={city} onChange={(e) => setCity(e.target.value)} />
-      
-       <label className=' ml-0 md:ml-2  mr-2 text-3xl md:text-xl text-white'>Country:</label>   
-      <input type="text" className=" m-2 py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
+      </div>
+      <div className="flex items-center" >
+       <label className=' text-3xl md:text-xl text-white'>Country:</label>   
+       <input type="text" className=" m-2 py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
           placeholder="Enter country name" value={country} onChange={(e) => setCountry(e.target.value)} />
-      
+      </div>
+      </div>
       <button className=' bg-purple-500 text-black p-2 m-2 rounded-lg ' onClick={fetchWeatherData}>Submit</button>
       
       {weatherData &&
