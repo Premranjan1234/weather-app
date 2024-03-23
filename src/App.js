@@ -15,7 +15,7 @@ const App = () => {
           `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`
       );
       console.log(response)
-      setWeatherData(response.data.main)
+      setWeatherData(response)
       console.log(response.data.main)
 
     } catch (error) {
@@ -51,12 +51,13 @@ const App = () => {
       
       {weatherData &&
         <div>
-          <p className="text-3xl md:text-lg mt-2 mb-4 md:mb-2 font-bold text-white md:text-black">Feels Like: {weatherData.feels_like}K</p>
-          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black ">Temperature: {weatherData.temp}K</p>
-          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">Humidity: {weatherData.humidity}%</p>
-          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">temp_max: {weatherData.temp_max}K</p>
-          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">temp_min: {weatherData.temp_min}K</p>
-          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">pressure: {weatherData.pressure}hPa</p>
+          <p className="text-3xl md:text-lg mt-2 mb-4 md:mb-2 font-bold text-white md:text-black">Feels Like: {weatherData.data.main.feels_like}K</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black ">Temperature: {weatherData.data.main.temp}K</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">Humidity: {weatherData.data.main.humidity}%</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">temp_max: {weatherData.data.main.temp_max}K</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">temp_min: {weatherData.data.main.temp_min}K</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">pressure: {weatherData.data.main.pressure}hPa</p>
+          <p className="text-3xl md:text-lg mb-4 md:mb-2 font-bold text-white md:text-black">wind speed: {weatherData.data.wind.speed}m/s</p>
         </div>
      }
       </div>
